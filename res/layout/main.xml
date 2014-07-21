@@ -7,7 +7,16 @@
 
     <TextView
         android:layout_width="wrap_content"
+		android:color="#666666"
         android:layout_height="wrap_content"
         android:text="@string/hello" />
 
+	<gugo.android.widgets.gvselector.GVSelectorSimple
+		android:id="@+id/gvselector_test"
+		android:color="#666666"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"
+		android:text="teste"
+		android:editable="false" />
 </LinearLayout>
