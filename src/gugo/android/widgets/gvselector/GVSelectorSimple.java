@@ -78,6 +78,22 @@ public class GVSelectorSimple extends EditText
             mList.addAll(list);
 //      Collections.sort(mList);
     }
+	
+	public void setDialogResources(int back, int color, int title){
+		dialog.background = back;
+	}
+
+	public void setButtonBackgroundResource(int res){
+		button.background = res;
+	}
+
+	public void setListBackgroundResource(int res){
+		list.background = res;
+	}
+
+	public void setListItemBackgroundResource(int res){
+		listItem.background = res;
+	}
 
     OnClickListener onClick = new OnClickListener() {
         @Override
@@ -226,5 +242,9 @@ public class GVSelectorSimple extends EditText
 		public int background;
 		public int color;
 		public int text;
+		
+		//list
+		public int divider;
+		public int dividerWidth;
 	}
 }
