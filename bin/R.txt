@@ -1,0 +1,5 @@
+int id button_cancel 0x7f030001
+int id listview 0x7f030000
+int id textview 0x7f030002
+int layout dialog_simple 0x7f020000
+int layout item_simple 0x7f020001
