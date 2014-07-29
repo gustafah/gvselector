@@ -45,9 +45,9 @@ public class GVSelectorSimple extends EditText
 	@Override
 	protected void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
 		super.onFocusChanged(focused, direction, previouslyFocusedRect);
-		if(focused)
-			askInfo();
-		if(selected.padding > -1) setPadding(selected.padding, selected.padding, selected.padding, selected.padding);
+		//if(focused)
+			//askInfo();
+		//if(selected.padding > -1) setPadding(selected.padding, selected.padding, selected.padding, selected.padding);
 	}
 
 	public void setOnItemClickListener(OnGVSelectorClickListener listener){

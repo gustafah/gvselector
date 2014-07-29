@@ -9,14 +9,503 @@ package gugo.android.widgets.gvselector;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_background=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_padding=0x7f010007;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_text=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_textAppearance=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_textColor=0x7f010005;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int button_textSize=0x7f010006;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dialog_background=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dialog_padding=0x7f010002;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dialog_title=0x7f010000;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_background=0x7f01000e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_padding=0x7f010012;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_textAppearance=0x7f010011;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_textColor=0x7f010010;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_textSize=0x7f01000f;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int list_backfround=0x7f010009;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int list_divider=0x7f01000a;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int list_dividerHeight=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int list_isFastScroll=0x7f01000d;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int list_listSelector=0x7f01000c;
     }
     public static final class id {
-        public static int button_cancel=0x7f030001;
-        public static int listview=0x7f030000;
-        public static int textview=0x7f030002;
+        public static final int button_cancel=0x7f030001;
+        public static final int listview=0x7f030000;
+        public static final int textview=0x7f030002;
     }
     public static final class layout {
-        public static int dialog_simple=0x7f020000;
-        public static int item_simple=0x7f020001;
+        public static final int dialog_simple=0x7f020000;
+        public static final int item_simple=0x7f020001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a gvAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #gvAttrs_button_background gugo.android.widgets.gvselector:button_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_button_padding gugo.android.widgets.gvselector:button_padding}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_button_text gugo.android.widgets.gvselector:button_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_button_textAppearance gugo.android.widgets.gvselector:button_textAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_button_textColor gugo.android.widgets.gvselector:button_textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_button_textSize gugo.android.widgets.gvselector:button_textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_dialog_background gugo.android.widgets.gvselector:dialog_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_dialog_padding gugo.android.widgets.gvselector:dialog_padding}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_dialog_title gugo.android.widgets.gvselector:dialog_title}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_item_background gugo.android.widgets.gvselector:item_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_item_padding gugo.android.widgets.gvselector:item_padding}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_item_textAppearance gugo.android.widgets.gvselector:item_textAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_item_textColor gugo.android.widgets.gvselector:item_textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_item_textSize gugo.android.widgets.gvselector:item_textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_list_backfround gugo.android.widgets.gvselector:list_backfround}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_list_divider gugo.android.widgets.gvselector:list_divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_list_dividerHeight gugo.android.widgets.gvselector:list_dividerHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_list_isFastScroll gugo.android.widgets.gvselector:list_isFastScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #gvAttrs_list_listSelector gugo.android.widgets.gvselector:list_listSelector}</code></td><td></td></tr>
+           </table>
+           @see #gvAttrs_button_background
+           @see #gvAttrs_button_padding
+           @see #gvAttrs_button_text
+           @see #gvAttrs_button_textAppearance
+           @see #gvAttrs_button_textColor
+           @see #gvAttrs_button_textSize
+           @see #gvAttrs_dialog_background
+           @see #gvAttrs_dialog_padding
+           @see #gvAttrs_dialog_title
+           @see #gvAttrs_item_background
+           @see #gvAttrs_item_padding
+           @see #gvAttrs_item_textAppearance
+           @see #gvAttrs_item_textColor
+           @see #gvAttrs_item_textSize
+           @see #gvAttrs_list_backfround
+           @see #gvAttrs_list_divider
+           @see #gvAttrs_list_dividerHeight
+           @see #gvAttrs_list_isFastScroll
+           @see #gvAttrs_list_listSelector
+         */
+        public static final int[] gvAttrs = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010, 0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_background}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_background
+        */
+        public static final int gvAttrs_button_background = 3;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_padding}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_padding
+        */
+        public static final int gvAttrs_button_padding = 7;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_text}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_text
+        */
+        public static final int gvAttrs_button_text = 4;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_textAppearance}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_textAppearance
+        */
+        public static final int gvAttrs_button_textAppearance = 8;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_textColor}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_textColor
+        */
+        public static final int gvAttrs_button_textColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#button_textSize}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:button_textSize
+        */
+        public static final int gvAttrs_button_textSize = 6;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#dialog_background}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:dialog_background
+        */
+        public static final int gvAttrs_dialog_background = 1;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#dialog_padding}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:dialog_padding
+        */
+        public static final int gvAttrs_dialog_padding = 2;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#dialog_title}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:dialog_title
+        */
+        public static final int gvAttrs_dialog_title = 0;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#item_background}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:item_background
+        */
+        public static final int gvAttrs_item_background = 14;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#item_padding}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:item_padding
+        */
+        public static final int gvAttrs_item_padding = 18;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#item_textAppearance}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:item_textAppearance
+        */
+        public static final int gvAttrs_item_textAppearance = 17;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#item_textColor}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:item_textColor
+        */
+        public static final int gvAttrs_item_textColor = 16;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#item_textSize}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:item_textSize
+        */
+        public static final int gvAttrs_item_textSize = 15;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#list_backfround}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:list_backfround
+        */
+        public static final int gvAttrs_list_backfround = 9;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#list_divider}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:list_divider
+        */
+        public static final int gvAttrs_list_divider = 10;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#list_dividerHeight}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:list_dividerHeight
+        */
+        public static final int gvAttrs_list_dividerHeight = 11;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#list_isFastScroll}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:list_isFastScroll
+        */
+        public static final int gvAttrs_list_isFastScroll = 13;
+        /**
+          <p>This symbol is the offset where the {@link gugo.android.widgets.gvselector.R.attr#list_listSelector}
+          attribute's value can be found in the {@link #gvAttrs} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name gugo.android.widgets.gvselector:list_listSelector
+        */
+        public static final int gvAttrs_list_listSelector = 12;
+    };
 }
