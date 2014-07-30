@@ -6,6 +6,7 @@ import android.widget.*;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
@@ -20,22 +21,33 @@ public class GVSelectorSimple extends EditText
 	private int selectedId = 0;
 	OnGVSelectorClickListener mListener;
 
-	public GVSelectorSimple(Context context) {
-		super(context);
-		mContext = context;
-		init();
-	}
-
-	public GVSelectorSimple(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		mContext = context;
-		init();
-	}
-
+	public GVSelectorSimple(Context context) {this(context, null);}
+	public GVSelectorSimple(Context context, AttributeSet attrs) {this(context, attrs, 0);}
 	public GVSelectorSimple(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		mContext = context;
 		init();
+		organizeAttrs(attrs);
+	}
+	
+	private void organizeAttrs(AttributeSet attrs){
+		if (attrs == null) {
+            return;
+        }
+
+        TypedArray a = null;
+        try {
+            a = getContext().obtainStyledAttributes(attrs, R.styleable.gvAttrs);
+            dialog.backgroundRes = a.getInt(R.styleable.gvAttrs_dialog_background, -1);
+            dialog.textRes = a.getInt(R.styleable.gvAttrs_dialog_padding, -1);
+            dialog.padding = a.getInt(R.styleable.gvAttrs_dialog_title, -1);
+
+            //button.backgroundRes = a.getInt(R.styleable.gvAttrs_dialog_title, -1);
+        } finally {
+            if (a != null) {
+                a.recycle(); // ensure this is always called
+            }
+        }
 	}
 
 	public void showSelector(){

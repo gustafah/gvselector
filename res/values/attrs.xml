@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<declare-styleable name="gvAttrs">
-		<attr name="dialog_title" format="integer" />
-		<attr name="dialog_background" format="integer" />
-		<attr name="dialog_padding" format="dimension" />
+		<attr name="dialog_title" format="reference|string" />
+		<attr name="dialog_background" format="reference|integer" />
+		<attr name="dialog_padding" format="integer" />
 			
-		<attr name="button_background" format="integer" />
-		<attr name="button_text" format="integer" />
-		<attr name="button_textColor" format="color" />
-		<attr name="button_textSize" format="integer" />
-		<attr name="button_padding" format="dimension" />
-		<attr name="button_textAppearance" format="integer" />
+		<attr name="button_background" format="reference|integer" />
+		<attr name="button_text" format="reference|string" />
+		<attr name="button_textColor" format="reference|color" />
+		<attr name="button_textSize" format="dimension" />
+		<attr name="button_padding" format="integer" />
+		<attr name="button_textAppearance" format="reference" />
 
-		<attr name="list_backfround" format="integer" />
-		<attr name="list_divider" format="integer" />
-		<attr name="list_dividerHeight" format="integer" />
-		<attr name="list_listSelector" format="integer" />
+		<attr name="list_backfround" format="reference|integer" />
+		<attr name="list_divider" format="reference|integer" />
+		<attr name="list_dividerHeight" format="dimension" />
+		<attr name="list_listSelector" format="reference|integer" />
 		<attr name="list_isFastScroll" format="boolean" />
 
-		<attr name="item_background" format="integer" />
-		<attr name="item_textSize" format="integer" />
-		<attr name="item_textColor" format="color" />
-		<attr name="item_textAppearance" format="integer" />
-		<attr name="item_padding" format="dimension" />
+		<attr name="item_background" format="reference|integer" />
+		<attr name="item_textSize" format="dimension" />
+		<attr name="item_textColor" format="reference|color" />
+		<attr name="item_textAppearance" format="reference" />
+		<attr name="item_padding" format="integer" />
 	</declare-styleable>
 </resources>
