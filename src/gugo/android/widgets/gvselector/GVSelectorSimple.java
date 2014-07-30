@@ -39,10 +39,10 @@ public class GVSelectorSimple extends EditText
         try {
             a = getContext().obtainStyledAttributes(attrs, R.styleable.gvAttrs);
             dialog.backgroundRes = a.getInt(R.styleable.gvAttrs_dialog_background, -1);
-            dialog.textRes = a.getInt(R.styleable.gvAttrs_dialog_padding, -1);
-            dialog.padding = a.getInt(R.styleable.gvAttrs_dialog_title, -1);
+            dialog.textRes = a.getResourceId(R.styleable.gvAttrs_dialog_title, -1);
+            dialog.padding = a.getInt(R.styleable.gvAttrs_dialog_padding, -1);
 
-            //button.backgroundRes = a.getInt(R.styleable.gvAttrs_dialog_title, -1);
+            button.textRes = a.getResourceId(R.styleable.gvAttrs_button_text, -1);
         } finally {
             if (a != null) {
                 a.recycle(); // ensure this is always called
@@ -249,7 +249,7 @@ public class GVSelectorSimple extends EditText
 			if(mInfo.button.padding > -1) btnCancel.setPadding(mInfo.button.padding, mInfo.button.padding, mInfo.button.padding, mInfo.button.padding);
 			if(mInfo.button.textRes > -1) btnCancel.setText(mInfo.button.textRes);
 			if(mInfo.button.textSize > -1) btnCancel.setTextSize(mInfo.button.textSize);
-			System.out.println(mInfo.button.textRes + " > -1 = " + (mInfo.button.textRes > -1) + "(" + mContext.getString(mInfo.button.textRes) + ")");
+			//System.out.println(mInfo.button.textRes + " > -1 = " + (mInfo.button.textRes > -1) + "(" + mContext.getString(mInfo.button.textRes) + ")");
 			btnCancel.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
