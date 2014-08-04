@@ -11,12 +11,14 @@ import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.widget.AdapterView.OnItemClickListener;
+import android.content.res.Resources;
 
 public class GVSelectorSimple extends EditText
 {	
 	Context mContext;
 	ResourceKit dialog, button, list, listItem, selected;
 	private String title;
+	private int dpi;
 	private GVList mList = new GVList();
 	private int selectedId = 0;
 	OnGVSelectorClickListener mListener;
@@ -38,11 +40,29 @@ public class GVSelectorSimple extends EditText
         TypedArray a = null;
         try {
             a = getContext().obtainStyledAttributes(attrs, R.styleable.gvAttrs);
-            dialog.backgroundRes = a.getInt(R.styleable.gvAttrs_dialog_background, -1);
+            dialog.backgroundRes = a.getResourceId(R.styleable.gvAttrs_dialog_background, -1);
             dialog.textRes = a.getResourceId(R.styleable.gvAttrs_dialog_title, -1);
             dialog.padding = a.getInt(R.styleable.gvAttrs_dialog_padding, -1);
 
             button.textRes = a.getResourceId(R.styleable.gvAttrs_button_text, -1);
+			button.colorRes = a.getResourceId(R.styleable.gvAttrs_button_textColor, -1);
+			button.padding = a.getInt(R.styleable.gvAttrs_button_padding, -1);
+			button.appearanceRes = a.getResourceId(R.styleable.gvAttrs_button_textAppearance, -1);
+			button.textSize = a.getInt(R.styleable.gvAttrs_button_textSize, -1);
+			button.backgroundRes = a.getResourceId(R.styleable.gvAttrs_button_background, -1);
+			
+			list.backgroundRes = a.getResourceId(R.styleable.gvAttrs_list_backfround, -1);
+			list.dividerRes = a.getResourceId(R.styleable.gvAttrs_list_divider, -1);
+			list.dividerWidth = a.getInt(R.styleable.gvAttrs_list_dividerHeight, -1);
+			list.isFastScroll = a.getBoolean(R.styleable.gvAttrs_list_isFastScroll, true);
+			list.listSelectorRes = a.getResourceId(R.styleable.gvAttrs_list_listSelector, -1);
+			
+			listItem.backgroundRes = a.getResourceId(R.styleable.gvAttrs_item_background, -1);
+			listItem.textSize = a.getInt(R.styleable.gvAttrs_item_textSize, -1);
+			listItem.colorRes = a.getResourceId(R.styleable.gvAttrs_item_textColor, -1);
+			listItem.appearanceRes = a.getResourceId(R.styleable.gvAttrs_item_textAppearance, -1);
+			listItem.padding = a.getInt(R.styleable.gvAttrs_item_padding, -1);
+			
         } finally {
             if (a != null) {
                 a.recycle(); // ensure this is always called
@@ -73,6 +93,7 @@ public class GVSelectorSimple extends EditText
 		if(listItem==null) listItem = new ResourceKit();
 		if(selected==null) selected = new ResourceKit();
 		setOnClickListener(onClick);
+		dpi = (int)(getResources().getDisplayMetrics().density * 160f);
 	}
 
 	public String getTitle() {
@@ -149,7 +170,7 @@ public class GVSelectorSimple extends EditText
 		@Override
 		public void onClick(View arg0) {
 			askInfo();
-			if(selected.padding > -1) setPadding(selected.padding, selected.padding, selected.padding, selected.padding);
+			if(selected.padding > -1) setPadding(selected.padding*dpi, selected.padding*dpi, selected.padding*dpi, selected.padding*dpi);
 		}
 	};
 
@@ -163,49 +184,8 @@ public class GVSelectorSimple extends EditText
 		dialog.show();
 	}
 
-	private class DialogInfo {
-		private String title;
-		private GVList gvlist;
-		private OnGVSelectorClickListener listener;
-		private ResourceKit dialog, button, list, listItem;
-
-		public void setListener(OnGVSelectorClickListener listener)
-		{
-			this.listener = listener;
-		}
-		public OnGVSelectorClickListener getListener()
-		{
-			return listener;
-		}
-		public String getTitle() {
-			return title;
-		}
-		public void setTitle(String title) {
-			this.title = title;
-		}
-		public GVList getList() {
-			return gvlist;
-		}
-		public void setList(GVList list) {
-			this.gvlist = list;
-		}
-
-		public void setResourceKit(ResourceKit dialog, ResourceKit button, ResourceKit list, ResourceKit listItem){
-			this.dialog = dialog;
-			this.button = button;
-			this.list = list;
-			this.listItem = listItem;
-		}
-	}
-
-	public interface OnGVSelectorClickListener{
-		public void onItemClick(int itemId);
-		public void onCancelClick();
-	}
-
 	private class ListDialog extends Dialog implements OnItemClickListener
 	{
-
 		Context mContext;
 		OnGVSelectorClickListener mCallback;
 		GVList mFiltered;
@@ -222,7 +202,7 @@ public class GVSelectorSimple extends EditText
 			mFiltered.addAll(info.getList());
 			if(mInfo.dialog.textRes > -1) setTitle(mInfo.dialog.textRes);
 			if(mInfo.dialog.backgroundRes > -1) setBackgroundResource(mInfo.dialog.backgroundRes);
-			if(mInfo.dialog.padding > -1) setPadding(mInfo.dialog.padding, mInfo.dialog.padding, mInfo.dialog.padding, mInfo.dialog.padding);
+			if(mInfo.dialog.padding > -1) setPadding(mInfo.dialog.padding*dpi, mInfo.dialog.padding*dpi, mInfo.dialog.padding*dpi, mInfo.dialog.padding*dpi);
 			//getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
 			setContentView(R.layout.dialog_simple);
@@ -246,7 +226,7 @@ public class GVSelectorSimple extends EditText
 			}
 			if(mInfo.button.colorRes != -1) btnCancel.setTextColor(mInfo.button.colorRes);
 			if(mInfo.button.appearanceRes > -1) btnCancel.setTextAppearance(mContext, mInfo.button.appearanceRes);
-			if(mInfo.button.padding > -1) btnCancel.setPadding(mInfo.button.padding, mInfo.button.padding, mInfo.button.padding, mInfo.button.padding);
+			if(mInfo.button.padding > -1) btnCancel.setPadding(mInfo.button.padding*dpi, mInfo.button.padding*dpi, mInfo.button.padding*dpi, mInfo.button.padding*dpi);
 			if(mInfo.button.textRes > -1) btnCancel.setText(mInfo.button.textRes);
 			if(mInfo.button.textSize > -1) btnCancel.setTextSize(mInfo.button.textSize);
 			//System.out.println(mInfo.button.textRes + " > -1 = " + (mInfo.button.textRes > -1) + "(" + mContext.getString(mInfo.button.textRes) + ")");
@@ -323,28 +303,10 @@ public class GVSelectorSimple extends EditText
 			if(mItemRes.colorRes != -1) tvItem.setTextColor(mItemRes.colorRes);
 			if(mItemRes.textSize != -1) tvItem.setTextSize(mItemRes.textSize);
 			if(mItemRes.appearanceRes > -1) tvItem.setTextAppearance(mContext, mItemRes.appearanceRes);
-			if(mItemRes.padding > -1) tvItem.setPadding(mItemRes.padding, mItemRes.padding, mItemRes.padding, mItemRes.padding);
+			if(mItemRes.padding > -1) tvItem.setPadding(mItemRes.padding*dpi, mItemRes.padding*dpi, mItemRes.padding*dpi, mItemRes.padding*dpi);
 			tvItem.setText((String) getItem(p1));
 
 			return row;
 		}
-	}
-
-	private class ResourceKit {
-		//general
-		public int backgroundRes = -1;
-		public int colorRes = -1;
-		public int textRes = -1;
-		public int padding = -1;
-		public int textSize = -1;
-
-		//list
-		public int dividerRes = -1;
-		public int dividerWidth = -1;
-		public int listSelectorRes = -1;
-		public boolean isFastScroll = true;
-
-		//listItem
-		public int appearanceRes = -1;
 	}
 }
