@@ -45,23 +45,23 @@ public class GVSelectorSimple extends EditText
             dialog.padding = a.getInt(R.styleable.gvAttrs_dialog_padding, -1);
 
             button.textRes = a.getResourceId(R.styleable.gvAttrs_button_text, -1);
-			button.colorRes = a.getResourceId(R.styleable.gvAttrs_button_textColor, -1);
-			button.padding = a.getInt(R.styleable.gvAttrs_button_padding, -1);
+			button.colorRes = a.getColor(R.styleable.gvAttrs_button_textColor, -1);
+			button.padding = ((int)a.getDimension(R.styleable.gvAttrs_button_padding, -1));
 			button.appearanceRes = a.getResourceId(R.styleable.gvAttrs_button_textAppearance, -1);
 			button.textSize = a.getInt(R.styleable.gvAttrs_button_textSize, -1);
 			button.backgroundRes = a.getResourceId(R.styleable.gvAttrs_button_background, -1);
 			
 			list.backgroundRes = a.getResourceId(R.styleable.gvAttrs_list_backfround, -1);
 			list.dividerRes = a.getResourceId(R.styleable.gvAttrs_list_divider, -1);
-			list.dividerWidth = a.getInt(R.styleable.gvAttrs_list_dividerHeight, -1);
+			list.dividerWidth = (int) a.getDimension(R.styleable.gvAttrs_list_dividerHeight, -1);
 			list.isFastScroll = a.getBoolean(R.styleable.gvAttrs_list_isFastScroll, true);
 			list.listSelectorRes = a.getResourceId(R.styleable.gvAttrs_list_listSelector, -1);
 			
 			listItem.backgroundRes = a.getResourceId(R.styleable.gvAttrs_item_background, -1);
 			listItem.textSize = a.getInt(R.styleable.gvAttrs_item_textSize, -1);
-			listItem.colorRes = a.getResourceId(R.styleable.gvAttrs_item_textColor, -1);
+			listItem.colorRes = a.getColor(R.styleable.gvAttrs_item_textColor, -1);
 			listItem.appearanceRes = a.getResourceId(R.styleable.gvAttrs_item_textAppearance, -1);
-			listItem.padding = a.getInt(R.styleable.gvAttrs_item_padding, -1);
+			listItem.padding = (int)a.getDimension(R.styleable.gvAttrs_item_padding, -1);
 			
         } finally {
             if (a != null) {
@@ -93,7 +93,7 @@ public class GVSelectorSimple extends EditText
 		if(listItem==null) listItem = new ResourceKit();
 		if(selected==null) selected = new ResourceKit();
 		setOnClickListener(onClick);
-		dpi = (int)(getResources().getDisplayMetrics().density * 160f);
+		dpi = (int)(getResources().getDisplayMetrics().density * 16f);
 	}
 
 	public String getTitle() {
@@ -226,7 +226,7 @@ public class GVSelectorSimple extends EditText
 			}
 			if(mInfo.button.colorRes != -1) btnCancel.setTextColor(mInfo.button.colorRes);
 			if(mInfo.button.appearanceRes > -1) btnCancel.setTextAppearance(mContext, mInfo.button.appearanceRes);
-			if(mInfo.button.padding > -1) btnCancel.setPadding(mInfo.button.padding*dpi, mInfo.button.padding*dpi, mInfo.button.padding*dpi, mInfo.button.padding*dpi);
+			if(mInfo.button.padding > -1) btnCancel.setPadding(mInfo.button.padding, mInfo.button.padding, mInfo.button.padding, mInfo.button.padding);
 			if(mInfo.button.textRes > -1) btnCancel.setText(mInfo.button.textRes);
 			if(mInfo.button.textSize > -1) btnCancel.setTextSize(mInfo.button.textSize);
 			//System.out.println(mInfo.button.textRes + " > -1 = " + (mInfo.button.textRes > -1) + "(" + mContext.getString(mInfo.button.textRes) + ")");
@@ -303,7 +303,7 @@ public class GVSelectorSimple extends EditText
 			if(mItemRes.colorRes != -1) tvItem.setTextColor(mItemRes.colorRes);
 			if(mItemRes.textSize != -1) tvItem.setTextSize(mItemRes.textSize);
 			if(mItemRes.appearanceRes > -1) tvItem.setTextAppearance(mContext, mItemRes.appearanceRes);
-			if(mItemRes.padding > -1) tvItem.setPadding(mItemRes.padding*dpi, mItemRes.padding*dpi, mItemRes.padding*dpi, mItemRes.padding*dpi);
+			if(mItemRes.padding > -1) tvItem.setPadding(mItemRes.padding, mItemRes.padding, mItemRes.padding, mItemRes.padding);
 			tvItem.setText((String) getItem(p1));
 
 			return row;

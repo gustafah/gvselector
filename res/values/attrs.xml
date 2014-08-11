@@ -9,7 +9,7 @@
 		<attr name="button_text" format="reference" />
 		<attr name="button_textColor" format="reference|color" />
 		<attr name="button_textSize" format="dimension" />
-		<attr name="button_padding" format="integer" />
+		<attr name="button_padding" format="dimension" />
 		<attr name="button_textAppearance" format="reference" />
 
 		<attr name="list_backfround" format="reference" />
@@ -22,6 +22,6 @@
 		<attr name="item_textSize" format="dimension" />
 		<attr name="item_textColor" format="reference|color" />
 		<attr name="item_textAppearance" format="reference" />
-		<attr name="item_padding" format="integer" />
+		<attr name="item_padding" format="dimension" />
 	</declare-styleable>
 </resources>
